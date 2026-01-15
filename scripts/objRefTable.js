@@ -6,6 +6,7 @@ self.C3_GetObjectRefTable = function () {
 		C3.Plugins.Keyboard,
 		C3.Plugins.TextBox,
 		C3.Plugins.LocalStorage,
+		C3.Plugins.Browser,
 		C3.Plugins.Text,
 		C3.Behaviors.Fade,
 		C3.Behaviors.Tween,
@@ -38,7 +39,8 @@ self.C3_GetObjectRefTable = function () {
 		C3.Plugins.LocalStorage.Cnds.OnItemExists,
 		C3.Plugins.LocalStorage.Acts.GetItem,
 		C3.Plugins.LocalStorage.Cnds.OnItemMissing,
-		C3.Plugins.LocalStorage.Exps.ItemValue
+		C3.Plugins.LocalStorage.Exps.ItemValue,
+		C3.Plugins.Browser.Acts.RequestFullScreen
 	];
 };
 self.C3_JsPropNameTable = [
@@ -52,6 +54,7 @@ self.C3_JsPropNameTable = [
 	{Keyboard: 0},
 	{TextInput2: 0},
 	{LocalStorage: 0},
+	{Browser: 0},
 	{images: 0},
 	{Карточка: 0},
 	{Менеджера: 0},
@@ -82,6 +85,7 @@ self.C3_JsPropNameTable = [
 	{ShadowCaster: 0},
 	{images2: 0},
 	{Sprite2: 0},
+	{fullscreen: 0},
 	{numLine: 0},
 	{numCalc: 0},
 	{name: 0},
@@ -107,6 +111,7 @@ self.InstanceType = {
 	Keyboard: class extends self.IInstance {},
 	TextInput2: class extends self.ITextInputInstance {},
 	LocalStorage: class extends self.IInstance {},
+	Browser: class extends self.IInstance {},
 	images: class extends self.ISpriteInstance {},
 	Карточка: class extends self.ITextInstance {},
 	Менеджера: class extends self.ITextInstance {},
@@ -132,5 +137,6 @@ self.InstanceType = {
 	TextInput: class extends self.ITextInputInstance {},
 	імідж2: class extends self.ITextInstance {},
 	images2: class extends self.ISpriteInstance {},
-	Sprite2: class extends self.ISpriteInstance {}
+	Sprite2: class extends self.ISpriteInstance {},
+	fullscreen: class extends self.ISpriteInstance {}
 }
